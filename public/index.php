@@ -37,7 +37,7 @@
 $url = 'http://api.openweathermap.org/data/2.5/weather';
 
 $options = array(
-	'id' => '703448',
+	'id' => '2656396',
 	'appid' => '57be7c28549ba906dda991a015238f2a',
 	'units' => 'metric',
 	'lang' => 'en',
@@ -53,6 +53,16 @@ curl_close($ch);
 
 echo '<pre>';
 print_r($data);
+
+echo '<hr/>';
+
+$date = date('d-m-y h:i:s');
+echo 'Request has been done at: ' . $date;
+
+echo '<hr/>';
+
+$milliseconds = floor(microtime(true) * 1000);
+echo 'UNIX Time: ' . $milliseconds;
 
 // exit();
 
